@@ -24,7 +24,7 @@ export default class Matrix {
     return [numRows, numCols]
   }
 
-  getElement([row, col]: [row: number, col: number]) {
+  getElement(row: number, col: number) {
     return this.#rows[row][col]
   }
 
@@ -59,7 +59,7 @@ export default class Matrix {
     for (let i = 0; i < numCols; i++) {
       newElements.push([])
       for (let j = 0; j < numRows; j++) {
-        newElements[i][j] = matrix.getElement([j, i])
+        newElements[i][j] = matrix.getElement(j, i)
       }
     }
 

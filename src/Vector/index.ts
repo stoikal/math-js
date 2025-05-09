@@ -19,7 +19,7 @@ export default class Vector extends Matrix {
     let result = 0
 
     for (let i = 0; i < a.dimension; i++) {
-      result += a.getElement([i, 0]) * b.getElement([i, 0])
+      result += a.getElement(i, 0) * b.getElement(i, 0)
     }
 
     return result

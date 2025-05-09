@@ -43,9 +43,9 @@ test('getElement', () => {
     [7, 8, 9],
   ])
 
-  expect(A.getElement([0, 0])).toBe(1)
-  expect(A.getElement([1, 1])).toBe(5)
-  expect(A.getElement([2, 1])).toBe(8)
+  expect(A.getElement(0, 0)).toBe(1)
+  expect(A.getElement(1, 1)).toBe(5)
+  expect(A.getElement(2, 1)).toBe(8)
 })
 
 test('transpose', () => {
