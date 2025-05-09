@@ -38,3 +38,16 @@ test('dot product', () => {
 
   expect(Vector.dot(a, b)).toBe(32)
 })
+
+test('magnitude', () => {
+  const a = new Vector([1, 2, 3])
+
+  expect(a.magnitude)
+    .toBe(
+      Math.sqrt(
+        Math.pow(1, 2) +
+        Math.pow(2, 2) +
+        Math.pow(3, 2),
+      )
+    )
+})

@@ -11,9 +11,20 @@ export default class Vector extends Matrix {
     return this.shape[0]
   }
 
+  get magnitude() {
+    let sum = 0;
+
+    for (let i = 0; i < this.shape[0]; i++) {
+      const n = this.getElement(i, 0)
+      sum += n * n
+    }
+
+    return Math.sqrt(sum)
+  }
+
   static dot (a: Vector, b: Vector) {
     if (a.dimension !== b.dimension) {
-      throw new Error("different size")
+      throw new Error("different sizes!")
     }
 
     let result = 0
