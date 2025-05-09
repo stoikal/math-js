@@ -1,4 +1,4 @@
-type Row = number[];
+export type Row = number[];
 
 export default class Matrix {
   #rows: Row[] = []
