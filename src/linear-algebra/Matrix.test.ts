@@ -1,5 +1,5 @@
 import { expect, test } from '@jest/globals'
-import Matrix from '.';
+import Matrix from './Matrix';
 
 test('toString', () => {
   const A = new Matrix([

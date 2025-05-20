@@ -1,6 +1,6 @@
 import { expect, test } from '@jest/globals'
-import Vector from "."
-import Matrix from '../Matrix';
+import Vector from "./Vector"
+import Matrix from './Matrix';
 
 test('instantiation', () => {
   const a = new Vector([1, 2, 3])
