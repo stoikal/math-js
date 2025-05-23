@@ -1,5 +1,5 @@
 import { expect, test } from '@jest/globals'
-import { decimalToBase, toDecimal } from './converter'
+import { convert, decimalToBase, toDecimal } from './converter'
 
 test('toDecimal', () => {
   const expectedArr = [
@@ -86,4 +86,13 @@ test('decimalToHexadecimal', () => {
     const result = toHex(input)
     expect(result).toBe(output)
   })
+})
+
+test('convert', () => {
+  expect(convert(31, '01')).toBe('11111')
+  expect(convert(2748, '0123456789ABCDEF')).toBe('ABC')
+  expect(convert(1234567890, ')!@#$%^&*(')).toBe('!@#$%^&*()')
+  expect(convert(42, '.~')).toBe('~.~.~.')
+  expect(convert(10, '|')).toBe('||||||||||')
+  expect(convert(10, '')).toBe('')
 })
