@@ -1,5 +1,5 @@
 import { expect, test } from '@jest/globals'
-import { findSmallestA, isCongruent } from './congruence'
+import { isCongruent } from './congruence'
 
 test('isCongruent', () => {
   expect(isCongruent(7, 1, 6)).toBe(true)
