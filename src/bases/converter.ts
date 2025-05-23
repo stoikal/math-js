@@ -23,19 +23,22 @@ export const toDecimal = (numericString: string, base: number) => {
   return decimal
 }
 
-export const decimalToBase = (base: number) => (num: number) => {
+export const decimalToBase = (base: number) => {
   if (base < 1 || base > 20) {
     throw new Error('only support 1 >= base <= 20')
   }
 
-  const map = '0123456789ABCDEFGHIJ'
+  return (num: number) => {
+    const map = '0123456789ABCDEFGHIJ'
 
-  let result = ""
-  while (num > 0) {
-    const remainder = num % base
-    const digit = map[remainder]
-    result = digit + result
-    num = Math.floor(num / base)
+    let result = ""
+    while (num > 0) {
+      const remainder = num % base
+      const digit = map[remainder]
+      result = digit + result
+      num = Math.floor(num / base)
+    }
+    return result
   }
-  return result
 }
+
