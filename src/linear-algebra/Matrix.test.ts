@@ -27,13 +27,15 @@ test('multiplyScalar', () => {
     [7, 8, 9],
   ])
 
+  const multiplier = 3
+
   const expected = new Matrix([
     [ 3,  6,  9],
     [12, 15, 18],
     [21, 24, 27],
   ])
 
-  expect(A.multiplyScalar(3).toString()).toBe(expected.toString())
+  expect(A.multiplyScalar(multiplier).toString()).toBe(expected.toString())
 })
 
 test('getElement', () => {
